@@ -1,0 +1,100 @@
+/* Custom radius values based on screen sizes */
+:root {
+    --mobile-radius: 150px;
+    --tablet-radius: 200px;
+    --desktop-radius: 250px;
+}
+
+.projectbox {
+
+    border: solid 1px #3BB8A4;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+
+h3 {
+    /* padding-left: 5px; */
+    color: #fff !important;
+}
+p {
+    color: #fff;
+}
+
+.project-title-row {
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+
+.project-title {
+    font-size: 96px;
+    color: #fff;
+}
+
+.project-button {
+    border-radius: 24px !important;
+    color: #EEE !important;
+    text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.50) !important;
+    font-size: 18px !important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    line-height: normal !important;
+}
+
+.project-button:hover {
+    transform: scale(1.2);
+    /* Scale the image on hover */
+}
+
+.project-button-primary {
+    background-color: #3BB8A4 !important;
+    margin-right: 20px;
+}
+
+.project-button-secondary {
+    background-color: rgba(57, 62, 70, 0.75) !important;
+    border-color: rgba(57, 62, 70, 0.75) !important;
+}
+
+.project-image {
+    display: flex;
+    justify-content: center;
+}
+
+/* Media Queries */
+/* For smaller screens (up to 767px) */
+@media (max-width: 991px) {
+
+    .project-title-box {
+        width: 100% !important;
+    }
+
+    .project-image {
+        display: none;
+    }
+
+    .project-arrow {
+        display: none;
+    }
+
+    .project-title-row {
+        text-align: center;
+    }
+
+    
+}
+
+/* For phone screens (up to 479px) */
+@media (max-width: 479px) {
+
+    .project-title {
+        font-size: 81px;
+    }
+
+    .project-button {
+        font-size: 12px !important;
+        line-height: 1.2 !important;
+    }
+
+}

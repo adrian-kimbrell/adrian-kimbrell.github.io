@@ -1,0 +1,62 @@
+.contact {
+    background-color: var(--primary-color);
+    height: auto;
+    border-bottom: 2px solid rgba(238, 238, 238, 0.10);
+    padding-bottom: 50px;
+}
+
+.contact-container {
+    /* max-width: 100px; */
+}
+
+.contact-form-container {
+
+    color: #fff !important;
+    border-color: #3BB8A4 !important;
+    background-color: rgb(56, 59, 64) !important;
+
+}
+
+.contact-title {
+    font-size: 45px;
+    color: #fff;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.contact-labels {
+    color: #fff;
+}
+
+/* Change Color for All Button States */
+.contact-btn {
+    color: #fff;
+    /* Text color for all button states */
+    background-color: #3BB8A4 !important;
+    /* Background color for all button states */
+    border-color: #3BB8A4 !important;
+    /* Border color for all button states */
+}
+
+/* Hover State */
+.contact-btn:hover {
+    background-color: transparent !important;
+    border-color: #3BB8A4 !important;
+}
+
+/* Focus State */
+.contact-btn:focus {
+    box-shadow: 0 0 0 0.2rem #3BB8A4;
+}
+
+/* Active State */
+.contact-btn:active {
+    background-color: #cc7a00;
+    border-color: #cc7a00;
+}
+
+/* Disabled State */
+.contact-btn:disabled {
+    opacity: 0.65;
+}

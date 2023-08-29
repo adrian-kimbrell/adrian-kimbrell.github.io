@@ -1,0 +1,94 @@
+/* Update the existing CSS and add media queries */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 1rem;
+  border-bottom: 2px solid rgba(238, 238, 238, 0.10);
+  height: 124px;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  padding-left: 40px;
+  /* Adjust the padding for smaller screens */
+}
+
+.navbar-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-right: 1rem;
+}
+
+.navbar-right {
+  display: flex;
+  font-size: 18px;
+  padding-right: 40px;
+}
+
+.navbar-right a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 2rem;
+}
+
+.navbar-toggle {
+  display: none;
+  position: absolute;
+  right: 0;
+  margin-top: 20px;
+  margin-right: 30px;
+  scale: 1.5;
+  color: #3BB8A4
+}
+
+.navbar-toggle:hover {
+  color: #fff;
+}
+
+
+/* Add media queries for the responsive behavior */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 0;
+    height: 85px;
+  }
+
+  .navbar-left {
+    padding: 1rem 2rem;
+  }
+
+  .navbar-right {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 2rem;
+    display: none;
+    /* Hide links by default on smaller screens */
+    background-color: var(--primary-color);
+    /* Background color for the mobile menu */
+    width: 100%;
+    position: absolute;
+    top: 124px;
+    left: 0;
+    z-index: 9999;
+  }
+
+  .navbar-right.active {
+    display: flex;
+    /* Display the links when active class is added */
+  }
+
+  .navbar-right a {
+    margin: 1rem 0;
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+}

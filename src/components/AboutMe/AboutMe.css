@@ -1,0 +1,72 @@
+.aboutme {
+    background-color: var(--primary-color);
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    border-bottom: 2px solid rgba(238, 238, 238, 0.10);
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.aboutme-image-container {
+
+    text-align: center;
+}
+
+.aboutme-image {
+    border-radius: 50px;
+    border: solid #3BB8A4;
+    max-height: 50%;
+    max-width: 50%;
+    min-height: 220px;
+    min-width: 220px;
+}
+
+.aboutme-title-row {
+    align-content: center;
+    align-items: center;
+    height: 80%;
+
+}
+
+.aboutme-title {
+    font-size: 45px;
+    color: #fff;
+
+}
+
+.aboutme-text {
+    color: rgba(238, 238, 238, 0.75);
+
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.aboutme-button {
+    border-radius: 24px !important;
+    color: #EEE !important;
+    text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.50) !important;
+    border-radius: 24px;
+    font-size: 18px !important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    line-height: normal !important;
+
+}
+
+/* Media Queries */
+/* For smaller screens (up to 767px) */
+@media (max-width: 991px) {
+
+    .aboutme-title {
+        text-align: center;
+    }
+    .aboutme-text {
+        text-align: center;
+    }
+   
+}

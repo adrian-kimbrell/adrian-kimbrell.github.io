@@ -1,0 +1,125 @@
+/* Custom radius values based on screen sizes */
+:root {
+    --mobile-radius: 150px;
+    --tablet-radius: 200px;
+    --desktop-radius: 250px;
+}
+
+
+.home {
+    background-color: var(--primary-color);
+    height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    border-bottom: 2px solid rgba(238, 238, 238, 0.10);
+}
+
+.knowledge-image {
+    display: none;
+}
+
+
+.home-title-row {
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+
+.home-title {
+    font-size: 96px;
+    color: #fff;
+}
+
+.home-button {
+    border-radius: 24px !important;
+    color: #EEE !important;
+    text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.50) !important;
+    font-size: 18px !important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    line-height: normal !important;
+}
+
+.home-button:hover {
+    transform: scale(1.2);
+    /* Scale the image on hover */
+}
+
+.home-button-primary {
+    background-color: #3BB8A4 !important;
+    margin-right: 20px;
+}
+
+.home-button-secondary {
+    background-color: rgba(57, 62, 70, 0.75) !important;
+    border-color: rgba(57, 62, 70, 0.75) !important;
+}
+
+.home-image {
+    display: flex;
+    justify-content: center;
+}
+
+.knowledge-image:hover {
+    transform: scale(1.2);
+    /* Scale the image on hover */
+}
+
+.spinner {
+
+    animation: spin 100s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Media Queries */
+/* For smaller screens (up to 767px) */
+@media (max-width: 991px) {
+
+    .home-title-box {
+        width: 100% !important;
+    }
+
+    .home-image {
+        display: none;
+    }
+
+    .home-arrow {
+        display: none;
+    }
+
+    .home-title-row {
+        text-align: center;
+    }
+
+    .knowledge-image {
+        display: block;
+    }
+}
+
+/* For phone screens (up to 479px) */
+@media (max-width: 479px) {
+    .home {
+        height: 600px;
+    }
+
+    .home-title {
+        font-size: 81px;
+    }
+
+    .home-button {
+        font-size: 12px !important;
+        line-height: 1.2 !important;
+    }
+
+}
