@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/adrian-kimbrell.github.io/static/css/main.943140a7.css",
+    "main.js": "/adrian-kimbrell.github.io/static/js/main.7fc7faa6.js",
+    "static/js/787.8cb79076.chunk.js": "/adrian-kimbrell.github.io/static/js/787.8cb79076.chunk.js",
+    "static/media/adrian.png": "/adrian-kimbrell.github.io/static/media/adrian.d1be0c233ebbd2810527.png",
+    "static/media/doodles.png": "/adrian-kimbrell.github.io/static/media/doodles.bac2ca9678a19593b06c.png",
+    "index.html": "/adrian-kimbrell.github.io/index.html",
+    "main.943140a7.css.map": "/adrian-kimbrell.github.io/static/css/main.943140a7.css.map",
+    "main.7fc7faa6.js.map": "/adrian-kimbrell.github.io/static/js/main.7fc7faa6.js.map",
+    "787.8cb79076.chunk.js.map": "/adrian-kimbrell.github.io/static/js/787.8cb79076.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.943140a7.css",
+    "static/js/main.7fc7faa6.js"
+  ]
+}
