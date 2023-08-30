@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/adrian-kimbrell/adrian-kimbrell.github.io/static/css/main.943140a7.css",
-    "main.js": "/adrian-kimbrell/adrian-kimbrell.github.io/static/js/main.719e046c.js",
-    "static/js/787.8cb79076.chunk.js": "/adrian-kimbrell/adrian-kimbrell.github.io/static/js/787.8cb79076.chunk.js",
-    "static/media/adrian.png": "/adrian-kimbrell/adrian-kimbrell.github.io/static/media/adrian.d1be0c233ebbd2810527.png",
-    "static/media/doodles.png": "/adrian-kimbrell/adrian-kimbrell.github.io/static/media/doodles.bac2ca9678a19593b06c.png",
-    "index.html": "/adrian-kimbrell/adrian-kimbrell.github.io/index.html",
-    "main.943140a7.css.map": "/adrian-kimbrell/adrian-kimbrell.github.io/static/css/main.943140a7.css.map",
-    "main.719e046c.js.map": "/adrian-kimbrell/adrian-kimbrell.github.io/static/js/main.719e046c.js.map",
-    "787.8cb79076.chunk.js.map": "/adrian-kimbrell/adrian-kimbrell.github.io/static/js/787.8cb79076.chunk.js.map"
+    "main.css": "/static/css/main.943140a7.css",
+    "main.js": "/static/js/main.5b310fde.js",
+    "static/js/787.8cb79076.chunk.js": "/static/js/787.8cb79076.chunk.js",
+    "static/media/adrian.png": "/static/media/adrian.d1be0c233ebbd2810527.png",
+    "static/media/doodles.png": "/static/media/doodles.bac2ca9678a19593b06c.png",
+    "index.html": "/index.html",
+    "main.943140a7.css.map": "/static/css/main.943140a7.css.map",
+    "main.5b310fde.js.map": "/static/js/main.5b310fde.js.map",
+    "787.8cb79076.chunk.js.map": "/static/js/787.8cb79076.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.943140a7.css",
-    "static/js/main.719e046c.js"
+    "static/js/main.5b310fde.js"
   ]
 }
