@@ -53,9 +53,14 @@ const Home = () => {
 
     window.addEventListener('resize', updatePositions);
 
+    // Force a recalculation after initial render
+    setTimeout(updatePositions, 0);
+
     return () => {
       window.removeEventListener('resize', updatePositions);
     };
+
+    
   }, []);
 
   return (
@@ -83,7 +88,7 @@ const Home = () => {
           </div>
           <div className="col-md-6 home-image">
             <div className=''>
-              <img  src={doodlesImage} alt='doodle' />
+              <img src={doodlesImage} alt='doodle' />
             </div>
           </div>
         </div>

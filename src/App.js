@@ -21,7 +21,7 @@ const App = () => {
       <Home/>
       <AboutMe />
       <Projects />
-
+      <Skills/>
       <Contact />
       <Footer />
       {/* Add more sections as needed */}
