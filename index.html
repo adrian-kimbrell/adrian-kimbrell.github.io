@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programmer Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background-color: #010409;
+            color: #3BB8A4;
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #portfolioCard {
+            background: #000;
+            color: #3BB8A4;
+            border-radius: 10px;
+            box-shadow: 0 0 15px #3BB8A4;
+            overflow: hidden;
+            width: 500px;
+            height: 300px;
+            transition: all 0.5s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        #portfolioCard.expanded {
+            width: 500px;
+            height: 800px;
+        }
+
+        #portfolioCard.wide {
+            width: 1500px;
+            min-height: 800px;
+        }
+
+        .card-section {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .card-section.active {
+            display: flex;
+        }
+
+        .intro-section h3,
+        .intro-section p {
+            margin: 0;
+            text-align: center;
+        }
+
+        .links a {
+            color: #3BB8A4;
+            text-decoration: none;
+            margin: 0 5px;
+            transition: color 0.3s ease;
+        }
+
+        .links a:hover {
+            color: #00ffcc;
+        }
+
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid #3BB8A4;
+            margin-bottom: 10px;
+            object-fit: cover;
+        }
+
+        .project {
+            background-color: #1a1a1a;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px #3BB8A4;
+            width: 90%;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .about-me-blurb {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .about-me-blurb h5 {
+            margin-bottom: 5px;
+            color: #3BB8A4;
+        }
+
+        .about-me-blurb p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .back-button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            padding: 5px 10px;
+            background-color: #3BB8A4;
+            color: #000;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .back-button:hover {
+            background-color: #00ffcc;
+        }
+
+        #clickMe {
+            margin-top: 154px;
+            color: #3BB8A4;
+            font-size: 24px;
+            font-weight: normal;
+            text-align: center;
+            animation: pulse 1.5s infinite;
+            cursor: pointer;
+            display: none;
+        }
+
+        @keyframes pulse {
+            0% {
+                opacity: 0.8;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0.8;
+            }
+        }
+
+        @media (max-width: 768px) {
+            #portfolioCard {
+                width: 200px;
+                /* Adjusted for smaller screens */
+                height: auto;
+                /* Allows height to adapt to content */
+            }
+
+            /* #portfolioCard.expanded {
+                width: 100%;
+                height: auto;
+                /* Adjusted height for expanded card */
+            } */
+
+            /* #portfolioCard.wide {
+                width: 100%;
+                min-height: auto;
+                /* Adjusted height for wide card */
+            } */
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div id="portfolioCard">
+            <!-- Intro Section -->
+            <div class="card-section intro-section active" id="portfolioIntro">
+                <h3>Adrian Kimbrell</h3>
+                <p>Senior Software Engineer</p>
+                <div class="links">
+                    <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+
+                </div>
+
+            </div>
+            <div id="clickMe">Take My Card!</div>
+
+            <!-- Portfolio Content Section -->
+            <div class="card-section" id="portfolioContent">
+                <img class="avatar" src="static/images/1714272299706.jpg" alt="Avatar">
+                <div class="about-me-blurb">
+                    <p>Hello! I'm Adrian Kimbrell, a Full Stack Developer based in Tucson, Arizona.
+                    </p>
+                </div>
+                <div class="project" data-template-path="templates/about_me.html">Learn About me</div>
+                <h3 style="padding-top: 10px;">Professional Projects</h3>
+
+                <div class="project" data-template-path="templates/project_1.html">The Kaleidoscope API</div>
+                <div class="project" data-template-path="templates/project_2.html">Investor Relations Widgets</div>
+                <div class="project" data-template-path="templates/project_3.html">Data Extraction</div>
+                <h3 style="padding-top: 10px;">For Fun Projects</h3>
+                <div class="project" data-template-path="templates/fun_project_1.html">Cybervoid: LLM Adventure</div>
+                <div class="project" data-template-path="templates/fun_project_2.html">Savvy: Stable Diffusion UI</div>
+
+                <div class="links" style="padding-top: 20px;">
+                    <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+                </div>
+            </div>
+            <!-- Project Details Section -->
+            <div class="card-section" id="projectDetails">
+                <button class="back-button" onclick="goBackToPortfolio()">Back</button>
+                <h3 id="projectTitle"></h3>
+                <p id="projectDescription"></p>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            const $portfolioCard = $('#portfolioCard');
+            const $clickMe = $('#clickMe');
+            var has_clicked = false;
+
+            function showPortfolioContent() {
+                setActiveSection('portfolioContent');
+                $portfolioCard.addClass('expanded');
+                $clickMe.hide();
+            }
+
+            function showAboutMe() {
+                setActiveSection('aboutMeSection');
+                $portfolioCard.addClass('wide');
+            }
+
+            function showProjectDetails(title, templatePath) {
+                const $projectTitle = $('#projectTitle');
+                const $projectDescription = $('#projectDescription');
+
+                $.get(templatePath, function (html) {
+                    $projectDescription.html(html);
+                    setActiveSection('projectDetails');
+                    $portfolioCard.addClass('wide');
+                }).fail(function () {
+                    $projectDescription.html('<p>Error loading project details. Please try again later.</p>');
+                });
+            }
+
+            function goBackToPortfolio() {
+                setActiveSection('portfolioContent');
+                $portfolioCard.removeClass('wide');
+            }
+
+            function resetToIntro() {
+                setActiveSection('portfolioIntro');
+                $portfolioCard.removeClass('expanded wide');
+            }
+
+            function setActiveSection(sectionId) {
+                $('.card-section').removeClass('active');
+                $(`#${sectionId}`).addClass('active');
+            }
+
+            setTimeout(function () {
+                if (has_clicked == false) {
+                    $clickMe.show();
+                }
+            }, 5000);
+
+            $portfolioCard.on('click', function (event) {
+                if ($(event.target).closest('.links a').length || $portfolioCard.hasClass('wide')) {
+                    return;
+                }
+                showPortfolioContent();
+                has_clicked = true;
+            });
+
+            $('body').on('click', function (event) {
+                if (!$portfolioCard.is(event.target) && $portfolioCard.has(event.target).length === 0) {
+                    resetToIntro();
+                }
+            });
+
+            $clickMe.on('click', function () {
+                showPortfolioContent();
+            });
+
+            $('.project').on('click', function () {
+                const title = $(this).text();
+                const templatePath = $(this).data('template-path');
+                console.log(title);
+                showProjectDetails(title, templatePath);
+            });
+
+            $('.back-button').on('click', function () {
+                goBackToPortfolio();
+            });
+
+            const commands = {
+                "help": "Available commands:<br>- 'bio': Learn about Adrian's professional background.<br>- 'projects': Discover Adrian's key projects.<br>- 'skills': Find out about Adrian's skillset.<br>- 'contact': Get Adrian's contact information.<br>- 'clear': Clears the terminal output.",
+                "bio": "Hi, I’m Adrian Kimbrell, a Senior Software Engineer specializing in scalable SaaS platforms, REST APIs, and AI tools. I currently lead projects at Kaleidoscope, improving user experiences and optimizing workflows.",
+                "projects": "Professional Projects:<br>- Kaleidoscope: Enhanced user experiences and led AI Extraction Division.<br>- Cybervoid: An LLM-powered MUD adventure game.<br>- Savvy: A custom UI for Stable Diffusion.<br>",
+                "skills": "Adrian's Skills:<br>- Programming: Python, JavaScript, HTML, CSS.<br>- Technologies: REST APIs, Cloud Computing, Large Language Models.<br>- Specialties: Scalable Systems, AI Solutions.",
+                "contact": "You can reach Adrian on <a href='https://www.linkedin.com/in/yourprofile' target='_blank' style='color: #00ffcc;'>LinkedIn</a> or check out his <a href='https://github.com/yourusername' target='_blank' style='color: #00ffcc;'>GitHub</a>.",
+                "clear": "clear"
+            };
+
+            $('#cliInput').on('keydown', function (e) {
+                if (e.key === 'Enter') {
+                    const input = $(this).val().trim().toLowerCase();
+                    const $outputArea = $('#outputArea');
+
+                    if (input === 'clear') {
+                        $outputArea.html('');
+                    } else {
+                        const response = commands[input] || "Command not recognized. Type 'help' for a list of commands.";
+                        $outputArea.append(`<p><span style='color: #00ff00;'>$ </span>${input}<br>${response}</p>`);
+                    }
+
+                    $(this).val('');
+                    $outputArea.scrollTop($outputArea[0].scrollHeight);
+                }
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>
