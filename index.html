@@ -135,8 +135,8 @@
         }
 
         .nav-link::before {
-            content: './';
-            color: var(--primary-green);
+            content: '~/';
+            color: var(--phosphor-amber);
             opacity: 0;
             transition: opacity 0.3s ease;
         }
@@ -337,7 +337,8 @@
 
         .btn-primary::before {
             content: '$ ';
-            color: rgba(255, 255, 255, 0.8);
+            color: rgba(0, 0, 0, 0.8);
+            font-weight: bold;
         }
 
         .btn-primary:hover {
@@ -356,8 +357,9 @@
         }
 
         .btn-secondary::before {
-            content: 'git ';
-            color: var(--primary-green);
+            content: '$ ';
+            color: var(--phosphor-green-bright);
+            font-weight: bold;
         }
 
         .btn-secondary:hover {
@@ -442,8 +444,8 @@
         }
 
         .about-content h3::before {
-            content: 'const ';
-            color: var(--accent-purple);
+            content: 'export ';
+            color: var(--phosphor-amber);
             font-weight: 400;
         }
 
@@ -560,8 +562,12 @@
         }
 
         .experience-period::before {
-            content: '> ';
-            color: var(--primary-green);
+            content: '[' ;
+            color: var(--phosphor-green);
+        }
+        .experience-period::after {
+            content: ']';
+            color: var(--phosphor-green);
         }
 
         .experience-content h3 {
@@ -579,12 +585,12 @@
         }
 
         .experience-company::before {
-            content: '[SYS@';
+            content: 'company@';
             color: var(--phosphor-amber);
             margin-right: 0.3rem;
         }
         .experience-company::after {
-            content: ']';
+            content: ':~$';
             color: var(--phosphor-amber);
             margin-left: 0.3rem;
         }
@@ -1099,7 +1105,7 @@
     <!-- Navigation -->
     <nav class="nav">
         <div class="nav-container">
-            <a href="#hero" class="nav-logo mono">[ADRIAN.DEV]</a>
+            <a href="#hero" class="nav-logo mono">adrian@dev:~$</a>
             <ul class="nav-links">
                 <li><a href="#hero" class="nav-link active mono">home</a></li>
                 <li><a href="#about" class="nav-link mono">about</a></li>
@@ -1116,21 +1122,21 @@
         <div class="hero-content">
             <div class="hero-text">
                 <div class="hero-badge mono">
-                    <span>[SYSTEM]</span>
-                    <span>SENIOR.SOFTWARE.ENGINEER</span>
+                    <span>[PID:1337]</span>
+                    <span>senior_software_engineer</span>
                 </div>
-                <h1 class="hero-title serif typewriter">ADRIAN_KIMBRELL</h1>
-                <p class="hero-subtitle mono">&gt; BUILDING_SCALABLE_SYSTEMS.exe</p>
+                <h1 class="hero-title serif typewriter">adrian_kimbrell@unix</h1>
+                <p class="hero-subtitle mono">&gt; ./build_scalable_systems.sh</p>
                 <p class="hero-description">
                     Leading AI extraction teams at Kaleidoscope, architecting fintech APIs, and developing high-performance applications.
                     Passionate about innovation, optimization, and building systems that scale.
                 </p>
                 <div class="hero-cta">
                     <a href="#projects" class="btn btn-primary mono">
-                        RUN_PORTFOLIO.sh
+                        ./portfolio --view
                     </a>
-                    <a href="https://github.com/adriankimbrell" class="btn btn-secondary mono">
-                        CLONE_REPOS
+                    <a href="https://github.com/adrian-kimbrell" class="btn btn-secondary mono">
+                        git clone repos/
                     </a>
                 </div>
             </div>
@@ -1142,47 +1148,50 @@
                         <div class="terminal-dot minimize"></div>
                         <div class="terminal-dot maximize"></div>
                     </div>
-                    <div class="terminal-title mono">TERMINAL v1.0 - ADRIAN@SYSTEM</div>
+                    <div class="terminal-title mono">xterm - adrian@unix:~</div>
                 </div>
                 <div class="terminal-content mono">
                     <div class="terminal-line">
-                        <span class="terminal-prompt">C:\&gt;</span> SYSTEM.INFO
+                        <span class="terminal-prompt">adrian@unix:~$</span> uname -a
                     </div>
                     <div class="terminal-line">
-                        <span class="terminal-output">[LOADING PROFILE...]</span>
+                        <span class="terminal-output">Linux adrian 6.2.0 x86_64 GNU/Linux</span>
                     </div>
                     <div class="terminal-line">
-                        <span class="terminal-output">USER: SENIOR_SOFTWARE_ENGINEER</span>
+                        <span class="terminal-prompt">adrian@unix:~$</span> whoami
                     </div>
                     <div class="terminal-line">
-                        <span class="terminal-output">STATUS: ACTIVE</span>
+                        <span class="terminal-output">senior_software_engineer</span>
                     </div>
                     <div class="terminal-line">
-                        <span class="terminal-output">UPTIME: 8+ YEARS</span>
+                        <span class="terminal-prompt">adrian@unix:~$</span> uptime
                     </div>
                     <div class="terminal-line">
-                        <span class="terminal-prompt">C:\&gt;</span> DIR /SKILLS
+                        <span class="terminal-output">10+ years in production</span>
                     </div>
                     <div class="terminal-line">
-                        <span class="terminal-output">[JAVASCRIPT.EXE]     1024KB</span>
+                        <span class="terminal-prompt">adrian@unix:~$</span> ls -la ~/skills/
                     </div>
                     <div class="terminal-line">
-                        <span class="terminal-output">[PYTHON.EXE]         2048KB</span>
+                        <span class="terminal-output">-rwxr-xr-x  javascript.sh    1024K</span>
                     </div>
                     <div class="terminal-line">
-                        <span class="terminal-output">[SYSTEM_DESIGN.DLL]  4096KB</span>
+                        <span class="terminal-output">-rwxr-xr-x  python.py        2048K</span>
                     </div>
                     <div class="terminal-line">
-                        <span class="terminal-output">[CLOUD_ARCH.SYS]     8192KB</span>
+                        <span class="terminal-output">-rwxr-xr-x  system_design.c  4096K</span>
                     </div>
                     <div class="terminal-line">
-                        <span class="terminal-prompt">C:\&gt;</span> RUN MOTIVATION.BAT
+                        <span class="terminal-output">-rwxr-xr-x  cloud_arch.yaml  8192K</span>
                     </div>
                     <div class="terminal-line">
-                        <span class="terminal-output">&gt; CODE_IS_POETRY_IN_LOGIC</span>
+                        <span class="terminal-prompt">adrian@unix:~$</span> cat .motivation
                     </div>
                     <div class="terminal-line">
-                        <span class="terminal-prompt">C:\&gt;</span> <span class="terminal-cursor">█</span>
+                        <span class="terminal-output">"Code is poetry written in logic"</span>
+                    </div>
+                    <div class="terminal-line">
+                        <span class="terminal-prompt">adrian@unix:~$</span> <span class="terminal-cursor">█</span>
                     </div>
                 </div>
             </div>
@@ -1193,8 +1202,8 @@
     <section id="about" class="section">
         <div class="section-container">
             <div class="section-header fade-in">
-                <span class="section-badge mono">[ABOUT.SYS]</span>
-                <h2 class="section-title">SYSTEM_ENGINEER_PROFILE</h2>
+                <span class="section-badge mono">[/usr/share/about]</span>
+                <h2 class="section-title">cat /etc/passwd | grep adrian</h2>
                 <p class="section-description">
                     Passionate about crafting elegant solutions to complex problems
                 </p>
@@ -1210,13 +1219,13 @@
 
                     <div class="about-code-block mono">
                         <div>╔════════════════════════════════════════════╗</div>
-                        <div>║ SYSTEM.PROFILE.INIT()                     ║</div>
+                        <div>║ $ cat /etc/adrian.conf                     ║</div>
                         <div>╠════════════════════════════════════════════╣</div>
-                        <div>║ &gt; ROLE........: SENIOR_SOFTWARE_ENGINEER   ║</div>
-                        <div>║ &gt; EXPERIENCE..: 8+ YEARS                   ║</div>
-                        <div>║ &gt; PASSION.....: SCALABLE_SYSTEMS           ║</div>
-                        <div>║ &gt; FOCUS.......: DISTRIBUTED_AI             ║</div>
-                        <div>║ &gt; STATUS......: [ACTIVE]                   ║</div>
+                        <div>║ role="senior_software_engineer"            ║</div>
+                        <div>║ experience="10+ years"                     ║</div>
+                        <div>║ passion="scalable_systems"                 ║</div>
+                        <div>║ focus="distributed_ai"                     ║</div>
+                        <div>║ status="active"                            ║</div>
                         <div>╚════════════════════════════════════════════╝</div>
                     </div>
                 </div>
@@ -1247,8 +1256,8 @@
     <section id="experience" class="section">
         <div class="section-container">
             <div class="section-header fade-in">
-                <span class="section-badge mono">[EXPERIENCE.LOG]</span>
-                <h2 class="section-title">CAREER_TIMELINE</h2>
+                <span class="section-badge mono">[/var/log/experience]</span>
+                <h2 class="section-title">tail -f career.log</h2>
                 <p class="section-description">
                     Building impactful software solutions at scale
                 </p>
@@ -1339,8 +1348,8 @@
     <section id="skills" class="section">
         <div class="section-container">
             <div class="section-header fade-in">
-                <span class="section-badge mono">[SKILLS.MATRIX]</span>
-                <h2 class="section-title">TECH_STACK_LOADED</h2>
+                <span class="section-badge mono">[/proc/skills]</span>
+                <h2 class="section-title">dpkg -l | grep installed</h2>
                 <p class="section-description">
                     Expertise across modern development technologies and practices
                 </p>
@@ -1462,8 +1471,8 @@
     <section id="projects" class="section">
         <div class="section-container">
             <div class="section-header fade-in">
-                <span class="section-badge mono">[PROJECTS.DIR]</span>
-                <h2 class="section-title">FEATURED_REPOSITORIES</h2>
+                <span class="section-badge mono">[~/projects]</span>
+                <h2 class="section-title">ls -la ~/repos/</h2>
                 <p class="section-description">
                     High-impact applications showcasing technical expertise and problem-solving skills
                 </p>
@@ -1570,8 +1579,8 @@
     <section id="contact" class="section">
         <div class="section-container">
             <div class="section-header fade-in">
-                <span class="section-badge mono">[CONTACT.INIT]</span>
-                <h2 class="section-title">ESTABLISH_CONNECTION</h2>
+                <span class="section-badge mono">[/etc/contact.d]</span>
+                <h2 class="section-title">nc -l 1337</h2>
                 <p class="section-description">
                     Always interested in new challenges and collaboration opportunities
                 </p>
@@ -1617,13 +1626,13 @@
         // Boot Sequence Animation
         document.addEventListener('DOMContentLoaded', () => {
             const bootMessages = [
-                'INITIALIZING SYSTEM...',
-                'LOADING KERNEL MODULES...',
-                'MOUNTING FILE SYSTEMS...',
-                'CHECKING MEMORY... 8192MB OK',
-                'DETECTING HARDWARE...',
-                'LOADING PORTFOLIO.SYS...',
-                'SYSTEM READY.',
+                'Starting Linux kernel...',
+                'Loading kernel modules...',
+                'Mounting /dev/sda1 on /',
+                'Checking memory... 16384MB OK',
+                'Starting systemd...',
+                'Loading portfolio.service...',
+                '[  OK  ] Started portfolio.service',
                 ''
             ];
 
