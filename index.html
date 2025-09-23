@@ -166,8 +166,8 @@
         .hero-content {
             max-width: 1200px;
             display: grid;
-            grid-template-columns: 1fr 400px;
-            gap: 4rem;
+            grid-template-columns: 1fr minmax(300px, 450px);
+            gap: 3rem;
             align-items: center;
         }
 
@@ -241,6 +241,8 @@
             overflow: hidden;
             opacity: 0;
             animation: fadeInUp 1s ease-out 1.5s forwards;
+            max-width: 100%;
+            width: 100%;
         }
 
         .terminal-header {
@@ -282,14 +284,40 @@
             background: var(--crt-dark);
             color: var(--phosphor-green);
             font-family: 'VT323', monospace;
-            font-size: 1.2rem;
+            font-size: clamp(0.9rem, 1.5vw, 1.2rem);
             min-height: 300px;
+            max-height: 400px;
             letter-spacing: 0.05em;
+            overflow-x: auto;
+            overflow-y: auto;
+        }
+
+        /* Custom scrollbar for terminal */
+        .terminal-content::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        .terminal-content::-webkit-scrollbar-track {
+            background: var(--crt-dark);
+            border: 1px solid var(--phosphor-green-dim);
+        }
+
+        .terminal-content::-webkit-scrollbar-thumb {
+            background: var(--phosphor-green-dim);
+            border-radius: 0;
+        }
+
+        .terminal-content::-webkit-scrollbar-thumb:hover {
+            background: var(--phosphor-green);
         }
 
         .terminal-line {
             margin-bottom: 0.5rem;
-            font-size: 0.9rem;
+            font-size: inherit;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
         .terminal-prompt {
@@ -926,6 +954,11 @@
                 gap: 3rem;
             }
 
+            .hero-terminal {
+                max-width: 600px;
+                margin: 0 auto;
+            }
+
             .about-grid {
                 grid-template-columns: 1fr;
                 gap: 3rem;
@@ -936,28 +969,57 @@
             .nav-links {
                 display: none;
             }
-            
+
+            .hero {
+                padding: 1rem;
+            }
+
+            .hero-content {
+                gap: 2rem;
+            }
+
             .hero-cta {
                 flex-direction: column;
                 align-items: center;
             }
-            
+
+            .hero-terminal {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .terminal-content {
+                font-size: 0.85rem;
+                padding: 0.75rem;
+                min-height: 250px;
+                max-height: 350px;
+            }
+
+            .terminal-line {
+                font-size: 0.8rem;
+                word-break: break-word;
+                white-space: normal;
+            }
+
+            .terminal-header {
+                padding: 0.5rem 0.75rem;
+            }
+
+            .terminal-title {
+                font-size: 0.7rem;
+            }
+
             .experience-item {
                 grid-template-columns: 1fr;
                 gap: 1.5rem;
             }
-            
+
             .about-stats {
                 grid-template-columns: 1fr;
             }
-            
+
             .section {
                 padding: 4rem 1rem;
-            }
-
-            .terminal-content {
-                font-size: 0.8rem;
-                padding: 1rem;
             }
         }
 
@@ -1173,16 +1235,16 @@
                         <span class="terminal-prompt">adrian@unix:~$</span> ls -la ~/skills/
                     </div>
                     <div class="terminal-line">
-                        <span class="terminal-output">-rwxr-xr-x  javascript.sh    1024K</span>
+                        <span class="terminal-output">-rwxr-xr-x  javascript.sh</span>
                     </div>
                     <div class="terminal-line">
-                        <span class="terminal-output">-rwxr-xr-x  python.py        2048K</span>
+                        <span class="terminal-output">-rwxr-xr-x  python.py</span>
                     </div>
                     <div class="terminal-line">
-                        <span class="terminal-output">-rwxr-xr-x  system_design.c  4096K</span>
+                        <span class="terminal-output">-rwxr-xr-x  system_design.c</span>
                     </div>
                     <div class="terminal-line">
-                        <span class="terminal-output">-rwxr-xr-x  cloud_arch.yaml  8192K</span>
+                        <span class="terminal-output">-rwxr-xr-x  cloud_arch.yaml</span>
                     </div>
                     <div class="terminal-line">
                         <span class="terminal-prompt">adrian@unix:~$</span> cat .motivation
